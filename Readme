@@ -1,0 +1,120 @@
+Space Debris Tracker (C + DSA Project)
+Overview
+
+The Space Debris Tracker is a simulation-based system developed in C that monitors, analyzes, and manages space debris using multiple Data Structures and Algorithms (DSA) concepts.
+
+It helps in:
+
+Tracking debris objects
+Calculating risk levels
+Detecting possible collisions
+Performing spatial searches
+Simulating orbital movement
+Key Concepts Used
+
+This project integrates multiple DSA structures:
+
+Linked List – Store all debris dynamically
+Hash Table – Fast lookup using debris ID
+Max Heap – Retrieve highest risk debris efficiently
+KD-Tree – Spatial search (altitude and distance)
+Circular Queue – Orbit simulation
+Nested Traversal – Collision detection
+Features
+1. Add Debris
+Input: ID, velocity, altitude, distance
+Automatically computes risk factor
+Inserts into all data structures
+2. Display Debris
+Shows all stored debris with:
+Velocity
+Altitude
+Distance
+Risk
+3. Highest Risk Detection
+Uses Max Heap
+Retrieves debris with maximum risk instantly
+4. Spatial Search (KD-Tree)
+Search debris near:
+Given altitude
+Given distance
+Efficient 2D searching
+5. Orbit Simulation
+Uses Circular Queue
+Simulates debris movement step-by-step
+6. Collision Detection
+Compares debris pairs
+Detects potential collision based on:
+Distance difference < 500 km
+Velocity difference < 0.5 km/s
+Risk Calculation Formula
+
+Risk is calculated using:
+
+Risk = (velocity²) / (altitude × distance)
+
+Higher value indicates more dangerous debris.
+
+Project Structure
+Debris Struct – Stores all debris attributes
+KDNode Struct – Used for spatial indexing
+
+Global Structures:
+
+Linked List (head)
+Hash Table
+Max Heap
+KD Tree Root
+Circular Queue
+How to Run
+Compile
+
+gcc debris_tracker.c -o debris
+
+Execute
+
+./debris
+
+Menu Options
+Add Debris
+Display All Debris
+Highest Risk Debris
+Spatial Search
+Orbit Simulation
+Collision Detection
+Exit
+Example Workflow
+Add multiple debris objects
+View all entries
+Check highest risk debris
+Perform spatial search
+Simulate orbit movement
+Detect collisions
+Real-World Relevance
+
+This project simulates real-world space monitoring systems such as:
+
+Satellite tracking
+Space traffic management
+Collision avoidance systems (used by ISRO/NASA)
+Future Enhancements
+GUI Visualization (OpenGL / Web)
+Real-time satellite API integration
+Advanced physics-based simulation
+Machine learning for risk prediction
+Database integration (MongoDB / SQL)
+Author
+
+Developed as a DSA-based systems project in C focusing on real-world application of:
+
+Heaps
+Trees
+Hashing
+Queues
+Conclusion
+
+This project demonstrates how multiple data structures work together in a single system, making it a strong example of:
+
+Problem-solving using DSA
+System design in C
+Real-world simulation
